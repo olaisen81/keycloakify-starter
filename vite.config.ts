@@ -7,7 +7,12 @@ export default defineConfig({
     plugins: [
         react(),
         keycloakify({
-            accountThemeImplementation: "Single-Page"
+            accountThemeImplementation: "Single-Page",
+            themeName: "passworld-react",
+            keycloakVersionTargets:{
+                "22-to-25": false,
+                "all-other-versions": "passworld-react.jar"
+            }
         })
     ]
 });
