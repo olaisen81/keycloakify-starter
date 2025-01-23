@@ -1,0 +1,15 @@
+:where(:root) {
+    --pf-v5-global--palette--black-1000: #243b43;
+    --pf-v5-global--BackgroundColor--dark-100: #243b43;
+    --pf-v5-global--BackgroundColor--dark-300: #2e4953;
+    --pf-v5-global--BackgroundColor--dark-400: #4c6d79;
+    --pf-v5-global--BackgroundColor--dark-200: #4c6d79;
+    --pf-v5-global--active-color--400: #de6557;
+
+
+}
+
+:where(.pf-v5-theme-dark) {
+--pf-v5-global--BackgroundColor--100: #2e4953;
+--pf-v5-global--BackgroundColor--300: #4c6d79;
+}
