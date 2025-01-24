@@ -57,28 +57,19 @@
                 "attributes": {}
             },
             {
-                "id": "48b3a593-df22-451e-b335-cc1afce69597",
-                "name": "pippo",
-                "description": "",
-                "composite": false,
-                "clientRole": false,
-                "containerId": "5d0dd960-0478-4ca6-b64a-810a3f6f4071",
-                "attributes": {}
-            },
-            {
                 "id": "e92017b2-18a0-49cd-956c-fad64f16b26b",
                 "name": "default-roles-myrealm",
                 "description": "${role_default-roles}",
                 "composite": true,
-                "clientRole": false,
-                "containerId": "5d0dd960-0478-4ca6-b64a-810a3f6f4071",
-                "attributes": {},
                 "composites": {
+                    "realm": ["offline_access", "interno", "uma_authorization"],
                     "client": {
                         "account": ["delete-account", "manage-account", "view-profile"]
-                    },
-                    "realm": ["offline_access", "interno", "uma_authorization"]
-                }
+                    }
+                },
+                "clientRole": false,
+                "containerId": "5d0dd960-0478-4ca6-b64a-810a3f6f4071",
+                "attributes": {}
             },
             {
                 "id": "a5db0545-e02a-43c3-9863-9ee4ad16a0c6",
@@ -699,7 +690,7 @@
             "consentRequired": false,
             "standardFlowEnabled": true,
             "implicitFlowEnabled": false,
-            "directAccessGrantsEnabled": false,
+            "directAccessGrantsEnabled": true,
             "serviceAccountsEnabled": false,
             "publicClient": true,
             "frontchannelLogout": false,
@@ -1185,7 +1176,9 @@
             "protocol": "saml",
             "attributes": {
                 "consent.screen.text": "${samlRoleListScopeConsentText}",
-                "display.on.consent.screen": "true"
+                "display.on.consent.screen": "true",
+                "gui.order": "",
+                "include.in.token.scope": "false"
             },
             "protocolMappers": [
                 {
@@ -1544,7 +1537,8 @@
             "attributes": {
                 "include.in.token.scope": "false",
                 "consent.screen.text": "${rolesScopeConsentText}",
-                "display.on.consent.screen": "true"
+                "display.on.consent.screen": "true",
+                "gui.order": ""
             },
             "protocolMappers": [
                 {
@@ -1559,7 +1553,10 @@
                         "access.token.claim": "true",
                         "claim.name": "realm_access.roles",
                         "jsonType.label": "String",
-                        "multivalued": "true"
+                        "multivalued": "true",
+                        "id.token.claim": "false",
+                        "lightweight.claim": "false",
+                        "userinfo.token.claim": "false"
                     }
                 },
                 {
@@ -1585,7 +1582,10 @@
                         "access.token.claim": "true",
                         "claim.name": "resource_access.${client_id}.roles",
                         "jsonType.label": "String",
-                        "multivalued": "true"
+                        "multivalued": "true",
+                        "id.token.claim": "true",
+                        "lightweight.claim": "false",
+                        "userinfo.token.claim": "false"
                     }
                 }
             ]
@@ -1617,13 +1617,13 @@
         }
     ],
     "defaultDefaultClientScopes": [
-        "role_list",
         "profile",
         "email",
-        "roles",
         "web-origins",
         "acr",
-        "basic"
+        "basic",
+        "role_list",
+        "roles"
     ],
     "defaultOptionalClientScopes": [
         "offline_access",
@@ -1642,10 +1642,10 @@
         "strictTransportSecurity": "max-age=31536000; includeSubDomains"
     },
     "smtpServer": {},
-    "loginTheme": "keycloakify-starter",
-    "accountTheme": "keycloakify-starter",
+    "loginTheme": "passworld-react",
+    "accountTheme": "passworld-react",
     "adminTheme": "",
-    "emailTheme": "",
+    "emailTheme": "passworld-react",
     "eventsEnabled": false,
     "eventsListeners": ["keycloakify-logging", "jboss-logging"],
     "enabledEventTypes": [],
@@ -1673,14 +1673,14 @@
                 "subComponents": {},
                 "config": {
                     "allowed-protocol-mapper-types": [
-                        "oidc-usermodel-property-mapper",
                         "oidc-usermodel-attribute-mapper",
-                        "saml-user-attribute-mapper",
+                        "saml-role-list-mapper",
+                        "oidc-usermodel-property-mapper",
                         "saml-user-property-mapper",
+                        "oidc-full-name-mapper",
                         "oidc-sha256-pairwise-sub-mapper",
                         "oidc-address-mapper",
-                        "saml-role-list-mapper",
-                        "oidc-full-name-mapper"
+                        "saml-user-attribute-mapper"
                     ]
                 }
             },
@@ -1710,14 +1710,14 @@
                 "subComponents": {},
                 "config": {
                     "allowed-protocol-mapper-types": [
-                        "saml-user-property-mapper",
-                        "saml-user-attribute-mapper",
-                        "oidc-usermodel-property-mapper",
                         "oidc-sha256-pairwise-sub-mapper",
-                        "saml-role-list-mapper",
+                        "oidc-address-mapper",
+                        "saml-user-property-mapper",
                         "oidc-full-name-mapper",
                         "oidc-usermodel-attribute-mapper",
-                        "oidc-address-mapper"
+                        "oidc-usermodel-property-mapper",
+                        "saml-role-list-mapper",
+                        "saml-user-attribute-mapper"
                     ]
                 }
             },
@@ -2482,7 +2482,9 @@
         "cibaExpiresIn": "120",
         "oauth2DeviceCodeLifespan": "600",
         "parRequestUriLifespan": "60",
-        "clientSessionMaxLifespan": "0"
+        "clientSessionMaxLifespan": "0",
+        "acr.loa.map": "{}",
+        "frontendUrl": ""
     },
     "keycloakVersion": "26.0.8",
     "userManagedAccessAllowed": false,
@@ -2492,5 +2494,7 @@
     },
     "clientPolicies": {
         "policies": []
-    }
+    },
+    "displayName": "",
+    "displayNameHtml": ""
 }

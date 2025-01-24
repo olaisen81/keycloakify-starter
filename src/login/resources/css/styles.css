@@ -1,0 +1,384 @@
+/*************** OVERRIDE REGOLE ORIGINALI ***************/
+
+.login-pf {background:none;}
+.login-pf body {background:none;background-color:transparent;}
+.login-pf-page {padding:0px !important;position: absolute;top: 0;bottom: 0;left: 0;right: 0;display: flex;align-items: center;justify-content: center;}
+.pf-c-form__label {color:#808080;font-size: 14px;padding:0px 0px 0px 5px;font-weight: 500;margin-bottom: 5px;}
+#kc-form-login input[type="text"], #kc-form-login input[type="password"], #kc-reset-password-form input[type="text"], #kc-passwd-update-form input[type="password"],#kc-passwd-update-form input[type="text"],
+#kc-update-profile-form #email_address, #kc-totp-settings-form input[type="text"], #kc-otp-login-form input[type="text"], #kc-update-profile-form input[type="text"] {
+	width: 100%;
+	height: 45px;
+	box-sizing: border-box;
+	border-top:0px;
+	border-right:0px;
+	border-bottom:1px solid #ccc;
+	border-left:0px;
+	border-color:#ccc;
+	font-size: 22px;
+	padding: 0px 5px;
+	color:#333333;
+	background:transparent;
+}
+
+.btn-default{
+	color:#1F333E!important;
+}
+
+.btn-default:hover,.btn-default:focus {
+	background-color:#f1f1f1!important;
+}
+
+#kc-form-login .pf-c-input-group, #kc-passwd-update-form .pf-c-input-group {position:relative;}
+
+#kc-form-login input#password[type="password"] + button, #kc-form-login input#password[type="text"] + button,
+#kc-passwd-update-form input#password-new[type="password"] + button, #kc-passwd-update-form input#password-new[type="text"] + button,
+#kc-passwd-update-form input#password-confirm[type="password"] + button, #kc-passwd-update-form input#password-confirm[type="text"] + button
+{position: absolute;top: 2px;height: calc(100% - 4px);right: 2px;z-index: 500;}
+
+#kc-form-login input#password, #kc-passwd-update-form input#password-new, #kc-passwd-update-form input#password-confirm {padding-right:35px;}
+
+#kc-form-login input#password[type="password"] + button i, #kc-form-login input#password[type="text"] + button i,
+#kc-passwd-update-form input#password-new[type="password"] + button i,  #kc-passwd-update-form input#password-new[type="text"] + button i,
+#kc-passwd-update-form input#password-confirm[type="password"] + button i,  #kc-passwd-update-form input#password-confirm[type="text"] + button i
+{display:none;}
+
+#kc-form-login input#password[type="password"] + button, 
+#kc-passwd-update-form input#password-new[type="password"] + button,
+#kc-passwd-update-form input#password-confirm[type="password"] + button 
+{background-image: url(../img/ico-view-a.svg); background-repeat: no-repeat;background-size: 16px;background-position: center;}
+
+#kc-form-login input#password[type="text"] + button, 
+#kc-passwd-update-form input#password-new[type="text"] + button,
+#kc-passwd-update-form input#password-confirm[type="text"] + button
+{background-image: url(../img/ico-view-s.svg); background-repeat: no-repeat;background-size: 16px;background-position: center;}
+
+#kc-form-login input:focus, #kc-reset-password-form input:focus, #kc-passwd-update-form input:focus, #kc-update-profile-form #email_address:focus 
+{border-top:0px;border-right:0px;border-bottom:1px solid #ccc;border-left:0px;}
+#kc-form-login input:focus-visible, #kc-reset-password-form input:focus-visible, #kc-passwd-update-form input:focus-visible, #kc-update-profile-form #email_address::focus-visible
+{outline:0px;}
+
+#kc-login, #kc-reset-password-form #kc-form-buttons .pf-c-button, #kc-passwd-update-form #kc-form-buttons .pf-c-button, #kc-update-profile-form #kc-form-buttons .pf-c-button, #kc-update-profile-form #kc-form-buttons .pf-c-button  {
+	width: 100%;
+	margin-top: 35px;
+	border-radius: 3px;
+	border: 0;
+	background-color: #1F333E;
+	color: #fff;
+	height: 50px;
+	font-size: 20px;
+	cursor:pointer;
+}
+
+.login-pf-page .card-pf {padding:0;background: transparent;border: 0;box-shadow: none;margin: 0 !important;width: 100%;}
+.login-pf-page-header, .login-pf-header {display: none !important;}
+
+
+#kc-form-login .form-group:has(#username) {margin-bottom:40px !important;}
+#kc-form-login .form-group #password + button::after, #kc-passwd-update-form .form-group #password-new + button::after, #kc-passwd-update-form .form-group #password-confirm + button::after {
+    border-bottom: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+.pf-m-error {color:#b71918;font-weight:700;font-size: 14px;}
+
+.alert-error, .alert-success, .alert-warning, .alert-info {position: absolute;top: 0;display: flex;align-items: center;justify-content: center;width: 100%;z-index: 5;}
+.alert-error {border-bottom: 2px solid #b71918;border-top: 2px solid #b71918;}
+.alert-success {border-bottom: 2px solid #3e8635;border-top: 2px solid #3e8635;}
+.alert-warning {border-bottom: 2px solid #f0ab00;border-top: 2px solid #f0ab00;}
+.alert-info {border-bottom: 2px solid #1F333E;border-top: 2px solid #1F333E;background-color:#1F333E50;color:#fff;}
+.alert-info .pf-c-alert__icon {color:#1F333E;}
+
+
+#kc-passwd-update-form #kc-form-options .checkbox label {font-size: 14px;font-weight: 700;}
+#kc-passwd-update-form #kc-form-options .checkbox label #logout-sessions {margin-top:2px;}
+
+/************ PAGINA RESET PASSWORD ************/
+#kc-info {display:none;}
+
+/************** NUOVE REGOLE ******************/
+
+body {background-color: #f2f2f2 !important;font-family: 'Ubuntu', sans-serif;color:#333;line-height: 1.3;margin:0px;}
+h1 {color: #fff;font-size: 40px;font-weight: 500;letter-spacing: 0;line-height:45px;margin:10px 0;}
+h1#titolo-errore {font-size: 25px;}
+a {text-decoration: none;}
+div {box-sizing: border-box;}
+
+.d-flex {display: -ms-flexbox!important;display: flex!important;}
+.flex-column {-ms-flex-direction: column!important;flex-direction: column!important;}
+.align-items-center {-ms-flex-align: center!important;align-items: center!important;}
+.justify-content-center {-ms-flex-pack: center!important;justify-content: center!important;}
+.no-gutter {padding-right: 0; padding-left: 0;}
+.row {display: -ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;}
+label {display:inline-block;}
+
+.pannelloForm{
+	height: auto;
+	width: 880px;
+	box-shadow: 0 15px 70px -8px rgba(0,0,0,0.22);
+	border-radius: 15px;
+}
+
+.pannelloForm > div.row {margin:0px;}
+
+#istruzioni-accesso {font-weight:400;font-size:22px;line-height:28px;color: #fff;}
+
+#colonnaSx, #colonnaDx {
+   -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 30px 50px;
+    min-height: 400px;
+}
+
+#colonnaSx {
+	  display: flex;
+	  flex-direction: column;
+	  background-image: url('../img/sfondo-colonna.png');
+	  background-origin: padding-box;
+	  background-position: 50% 50%;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  border-top-left-radius: 15px;
+	  border-bottom-left-radius: 15px;
+}
+
+#colonnaSx.default {min-height:600px;}
+
+ #colonnaDx {
+ 	background-color:#fff;
+  	border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+	padding:150px 50px;
+	justify-content: center;
+ }
+
+  #wrapperImmagineMobile {
+    display: none;
+    background-image: url('../img/sfondo-colonna.png');
+    background-origin: padding-box;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .wrapperMessaggio {
+  	color: #fff;
+ 	font-size: 28px;
+ 	line-height: 1;
+ 	font-weight: 300;
+    margin-bottom: auto;
+}
+
+#wrapperSlogan {margin-top: 150px;}
+#wrapperIstruzioni {margin-top: 65px;}
+#wrapperIstruzioniCambioPassword {margin-top:150px;}
+#wrapperIstruzioniProfilo {margin-top: 75px;text-align:center;}
+
+#labelPassword {margin-top:30px;}
+
+
+a.linkRecupero {color:#333;font-weight:500;margin-top: 10px;display:inline-block;}
+a.linkRecupero:hover {color:#b71918;text-decoration: none;}
+
+
+/*************LOG OUT WIDTH REDIRECT / SIMPLE ***************/
+
+.logoutMessage, #kc-error-message {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background-image: url('../img/sfondo-logout-message.jpg');
+	flex-direction:column;
+
+}
+.logoutMessage .instruction, #kc-error-message .instruction {
+	color: #f2f2f2 !important;
+    font-size: 35px;
+    font-weight: bold;
+		max-width:600px;
+}
+.logoutMessage  .logoPass {
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+a#backToApplication {color: #DE6557;margin-top: 35px;display: inline-block;font-size:20px;font-weight:600;}
+
+
+/********* PAGINE AUTHENTICATOR *********/
+
+#colonnaSx.colonnaOTP {
+	background-image:none;
+	background-color:#1F333E;
+}
+
+#colonnaSx.colonnaOTP.codiceOTP {
+	display:flex;
+}
+
+#colonnaSx.colonnaOTP ol#kc-totp-settings {
+	list-style:none;
+}
+
+#colonnaSx #wrapperImmagine.logoPass {
+	background-image: url(../img/logoPass.svg);
+    background-repeat: no-repeat;
+    height: 40px;
+}
+
+.istruzioniApp {
+	color:#DE6557 !important;
+	font-size:25px;
+	font-weight:bold;
+	margin:25px 0;
+}
+
+.tipoApp {
+	color:#fff !important;
+	font-size:20px;
+	margin-bottom:25px;
+}
+
+.colonnaOTP li.stepDue {text-align:center;}
+.colonnaOTP li.stepDue img {border-radius:20px;}
+.colonnaOTP li.stepDue p, .colonnaOTP li.stepDue p a {color:#fff;font-size:16px;}
+.colonnaOTP li.stepDue p a {margin-top: 15px;display: inline-block;}
+
+.msgLoginStepTre {
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom:25px;
+	color:#000 !important;
+}
+
+.msgLoginStepTreDevice {
+	font-size:16px;
+	margin-bottom:25px;
+	color:#000;
+}
+#colonnaDx.stepTre {padding:110px 45px;}
+
+#kc-totp-settings-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#kc-totp-settings-form .form-group {width:100%;}
+
+#kc-totp-settings-form label {
+    color: #808080;
+    font-size: 14px;
+    padding: 0px 0px 0px 5px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#kc-totp-settings-form #kc-form-options {
+	padding:0 35px;
+}
+#kc-totp-settings-form #kc-form-options label {color:#000 !important;}
+
+#kc-totp-settings-form #saveTOTPBtn, #kc-totp-settings-form #cancelTOTPBtn {
+	width: calc(50% - 10px);
+    margin-top: 35px;
+    border-radius: 3px;
+    border: 0;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#kc-totp-settings-form #saveTOTPBtn {background-color: #1F333E;margin-left:5px;}
+#kc-totp-settings-form #cancelTOTPBtn {margin-right:5px;}
+
+.stepUnoManuale .istruzioniManuali {
+	color: #fff !important;
+	font-size: 16px;
+	font-weight: 600;
+}
+.stepUnoManuale .barCode {
+	font-size: 16px;
+    display: inline-block;
+    background-color: #fff;
+    color: #1F333E !important;
+    padding: 5px 10px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.stepUnoManuale .linkQr a {
+	color: #fff !important;    
+	font-size: 16px;
+}
+
+.stepDueManuale .impostazioniApp {
+    color: #fff !important;
+    font-size: 16px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+.stepDueManuale ul li {
+	color: #fff !important;    
+	font-size: 16px;
+}
+
+.messaggioCodiceOtp {margin-top: auto;margin-bottom: auto;}
+.messaggioCodiceOtp p {color: #fff !important;font-size: 20px;}
+#kc-otp-login-form #kc-login {margin-top:10px;}
+
+/*********************************/
+/******** MEDIA QUERY ***********/
+/*******************************/
+
+
+
+@media (max-width: 992px) { 
+	body {background-color: #fff !important;}
+	h1 {margin:0px;text-align: center;margin-bottom: 10px;font-size: 35px;}
+	#wrapperSlogan {margin:0;}
+	#wrapperIstruzioni {margin:10px;}
+	#wrapperIstruzioniCambioPassword {margin-top:40px;}
+	#wrapperIstruzioniProfilo {margin-top:110px;}
+	#istruzioni-accesso {text-align:center;font-size: 20px;}
+	#wrapperImmagine {position:absolute;top: 20px;left: 20px;}
+	#pannelloForm {width: 100%;box-shadow: none;height: 100%;border-radius: 0;}
+	#pannelloForm > .row, #container_form, #container_form form {height:100%;}
+	#colonnaSx {height: 45vh;max-width:100%;flex:0 0 100%;border-radius: 0;border-bottom-left-radius: 25px;border-bottom-right-radius: 25px;justify-content: center;align-items: center;min-height: unset;}
+	#colonnaDx {border-radius: 0;height: 55vh;max-width: 100%;flex: 0 0 100%;padding: 0;min-height: unset;}
+	input#kc-login, input#recuperoCredenziali {margin-top: 0 !important;border-radius: 0;}
+	#kc-login, #recuperoCredenziali {height:60px;}	
+	#kc-form {height:100%;}
+	#kc-form-wrapper {display:flex;/* align-items: center; */justify-content: center;height: 100%;}
+	#form_wrapper_reset_password, #form_wrapper_update_password, #form_wrapper_profile_update  
+	{display:flex;justify-content: center;height: 100%;flex-direction:column;align-items:center;}
+	#kc-passwd-update-form {max-width:600px;padding: 45px 30px;}
+	#kc-form-login {max-width:600px;padding: 45px 30px;}
+	#kc-reset-password-form, #kc-update-profile-form {max-width:600px;padding: 100px 30px 45px 30px;}
+	#kc-form-buttons {width: 100%;position: fixed;bottom: 0;left: 0;margin-bottom: 0;}
+	#kc-reset-password-form #kc-form-buttons, #kc-passwd-update-form #kc-form-buttons, #kc-update-profile-form #kc-form-buttons{padding:0px;}
+	#kc-reset-password-form #kc-form-buttons .pf-c-button, #kc-passwd-update-form #kc-form-buttons .pf-c-button, #kc-update-profile-form #kc-form-buttons .pf-c-button {border-radius:0;}
+	#colonnaSx.colonnaOTP {height:auto;padding-top:250px;}
+	.istruzioniApp {font-size:20px;}
+	.tipoApp {font-size:16px;}
+	.colonnaOTP li.stepDue p, .colonnaOTP li.stepDue p a {font-size:14px;}
+	#colonnaDx.stepTre {padding: 55px 45px;}
+}
+
+@media (max-width: 768px) { 
+	#wrapperIstruzioniProfilo {margin-top:75px;padding-top: 280px;}
+}
+
+.pf-c-alert__title-custom{
+margin: 40px 0 0;
+    font-size: 15px;
+    text-align: center
+}

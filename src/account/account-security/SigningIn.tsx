@@ -89,8 +89,25 @@ export const SigningIn = () => {
     const { t } = useTranslation();
     const context = useEnvironment();
     const { login } = context.keycloak;
-    
+
     console.log(context.keycloak);
+    context.keycloak.loadUserProfile().then(profile => {
+        console.log(profile);
+    });
+    context.keycloak.loadUserInfo().then(userInfo => {
+        console.log(userInfo);
+    });
+
+    console.log(context.keycloak.userInfo);
+
+
+    console.log("Realm access: " + context.keycloak.tokenParsed?.realm_access?.roles)
+
+
+    // getAccessToken().then(token => {
+    //     console.log(token);
+    // });
+
 
     const [credentials, setCredentials] = useState<CredentialContainer[]>();
 
@@ -232,6 +249,7 @@ export const SigningIn = () => {
                                                             ) : (
                                                                 <Button
                                                                     variant="secondary"
+                                                                    // isDisabled={context.keycloak.hasRealmRole("interno") ? true : false}
                                                                     isDisabled={context.keycloak.hasRealmRole("interno") ? true : false}
                                                                     onClick={() => {
                                                                         if (
