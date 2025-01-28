@@ -12,12 +12,12 @@
                                         <img src="${url.resourcesPath}/img/logoPass.svg">
                                     </div>
                                     <div class="wrapperMessaggio" id="wrapperSlogan">
-                                        <h1>Logout</h1>
-                                        <div id="istruzioni-accesso" class="istruzioni">Sei sicuro di volerti disconnettere?</div>
+                                        <h1>${msg("logoutConfirmHeader")}</h1>
+                                        <div id="istruzioni-accesso" class="istruzioni">${msg("logoutConfirmDescription")}</div>
                                     </div>
                                 </div>
                                 <div id="colonnaDx" class="colonna">
-                                    <form class="form-actions" action="${url.logoutConfirmAction}" onsubmit="confirmLogout.disabled = true; return true;" method="POST">
+                                    <form class="form-actions" id="kc-logout-confirm-form" action="${url.logoutConfirmAction}" onsubmit="confirmLogout.disabled = true; return true;" method="POST">
                                         <input type="hidden" name="session_code" value="${logoutConfirm.code}">
                                         <div class="${properties.kcFormGroupClass!}">
                                             <div id="kc-form-options">

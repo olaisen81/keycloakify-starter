@@ -57,7 +57,7 @@
 #kc-form-login input:focus-visible, #kc-reset-password-form input:focus-visible, #kc-passwd-update-form input:focus-visible, #kc-update-profile-form #email_address::focus-visible
 {outline:0px;}
 
-#kc-login, #kc-reset-password-form #kc-form-buttons .pf-c-button, #kc-passwd-update-form #kc-form-buttons .pf-c-button, #kc-update-profile-form #kc-form-buttons .pf-c-button, #kc-update-profile-form #kc-form-buttons .pf-c-button  {
+#kc-login, #kc-reset-password-form #kc-form-buttons .pf-c-button, #kc-passwd-update-form #kc-form-buttons .pf-c-button, #kc-update-profile-form #kc-form-buttons .pf-c-button, #kc-update-profile-form #kc-form-buttons .pf-c-button, #kc-logout-confirm-form .pf-c-button  {
 	width: 100%;
 	margin-top: 35px;
 	border-radius: 3px;
