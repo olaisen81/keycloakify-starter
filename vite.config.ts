@@ -6,7 +6,8 @@ import { keycloakify } from "keycloakify/vite-plugin";
 export default defineConfig({
     plugins: [
         react(),
-        keycloakify({
+        keycloakify(
+            {
             accountThemeImplementation: "Single-Page",
             themeName: "passworld-react",
             keycloakVersionTargets:{
